@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import FontPicker from 'font-picker-react'
-import { ChromePicker } from 'react-color';
+// import FontPicker from 'font-picker-react'
+// import { ChromePicker } from 'react-color';
 
 const HeroEditBox = () => {
   const [count, setCount] = useState(15)
@@ -15,10 +15,10 @@ const HeroEditBox = () => {
   const italic = () => setIsItalic(prev => !prev)
   const underline = () => setIsUnderline(prev => !prev)
 
-  const [activeFont, setActiveFont] = useState('Open Sans')
+  // const [activeFont, setActiveFont] = useState('Open Sans')
 
   const [showInput, setShowInput] = useState(false);
-  const [color, setColor] = useState('#333');
+  // const [color, setColor] = useState('#333');
   const [open, setOpen] = useState(false)
   const toggleText = () => {
     setOpen(prev => !prev)
@@ -40,18 +40,18 @@ const HeroEditBox = () => {
           </div>
 
           <div className='w-full md:w-auto'>
-            <ChromePicker
+            {/* <ChromePicker
               color={color}
               onChangeComplete={(updatedColor) => setColor(updatedColor.hex)}
-            />
+            /> */}
           </div>
 
           <div className='w-full'>
-            <FontPicker
+            {/* <FontPicker
               apiKey="AIzaSyCXtUmPQQEeWzZHf4ewWzUPRz6zUy3AaFc"
               activeFontFamily={activeFont}
               onChange={(nextFont) => setActiveFont(nextFont.family)}
-            />
+            /> */}
           </div>
         </div>
       )}
@@ -76,14 +76,14 @@ const HeroEditBox = () => {
             <input
               type="text"
               placeholder="Your paragraph text"
-              style={{
-                fontSize: `${count}px`,
-                fontFamily: activeFont,
-                fontWeight: isBold ? 'bold' : 'normal',
-                fontStyle: isItalic ? 'italic' : 'normal',
-                textDecoration: isUnderline ? 'underline' : 'none',
-                color: `${color}`
-              }}
+              // style={{
+              //   fontSize: `${count}px`,
+              //   fontFamily: activeFont,
+              //   fontWeight: isBold ? 'bold' : 'normal',
+              //   fontStyle: isItalic ? 'italic' : 'normal',
+              //   textDecoration: isUnderline ? 'underline' : 'none',
+              //   color: `${color}`
+              // }}
               className="border border-gray-500 rounded px-4 py-2 w-full md:w-auto text-center"
             />
           ) : (
